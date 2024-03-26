@@ -36,5 +36,4 @@ def all_thing_is_obj(object: any) -> int:
     else:
         uppercase_letter = uppercase_mapping.get(class_name[0])
         print(f"{uppercase_letter}{class_name[1:]} :", class_type)
-        # print(f"{int(class_name[0]) - 32 + class_name[1:]} :", class_type)
     return 42
