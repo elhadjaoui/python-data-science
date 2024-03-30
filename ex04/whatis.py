@@ -1,6 +1,4 @@
-
 import sys
-
 def main():
     if len(sys.argv) > 2:
         print("AssertionError: more than one argument is provided")
