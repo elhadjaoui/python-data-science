@@ -52,11 +52,13 @@ def main():
         print("AssertionError: more than one argument is provided")
         return
     elif my_len(sys.argv) < 2:
+        print()
         return
     number = my_int(sys.argv[1])
     if number is None:
         return
     print("I'm Even." if number % 2 == 0 else "I'm Odd.")
+    print()
 
 
 if __name__ == "__main__":

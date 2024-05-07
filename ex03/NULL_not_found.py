@@ -10,7 +10,7 @@ def NULL_not_found(object: any) -> int:
         print(f"Fake: {object} { class_type}")
     elif class_name == "float":
         print(f"Cheese: {object} { class_type}")
-    elif class_name == "str" and not object :
+    elif class_name == "str" and not object:
         print(f"Empty: {object} { class_type}")
     else:
         print("Type not Found")
