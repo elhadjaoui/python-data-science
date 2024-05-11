@@ -1,7 +1,6 @@
 def NULL_not_found(object: any) -> int:
     class_name = object.__class__.__name__
     class_type = object.__class__
-    
     if class_name == "NoneType":
         print(f"Nothing: {object} { class_type}")
     elif class_name == "int":

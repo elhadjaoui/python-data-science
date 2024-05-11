@@ -1,10 +1,10 @@
 import sys
 
 
-def my_len(string):
+def my_len(iter):
     '''Return the length of a string'''
     count = 0
-    for _ in string:
+    for _ in iter:
         count += 1
     return count
 
@@ -85,9 +85,9 @@ def main():
     '''
     try:
         str = ''
-        if len(sys.argv) > 2:
+        if my_len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
-        elif len(sys.argv) < 2:
+        elif my_len(sys.argv) < 2:
             print("Please enter a text:")
             while True:
                 try:
@@ -108,4 +108,5 @@ def main():
 
 
 if __name__ == "__main__":
+    '''Call the main function'''
     main()

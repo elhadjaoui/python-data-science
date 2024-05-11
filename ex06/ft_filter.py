@@ -7,8 +7,10 @@ is true. If function is None, return the items that are true."""
 
 
 def main():
+    """Print the documentation of the ft_filter function"""
     print(ft_filter.__doc__)
 
 
 if __name__ == "__main__":
+    """Run the main function"""
     main()
