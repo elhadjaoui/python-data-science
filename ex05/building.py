@@ -1,14 +1,6 @@
 import sys
 
 
-def my_len(iter):
-    '''Return the length of a string'''
-    count = 0
-    for _ in iter:
-        count += 1
-    return count
-
-
 def my_isdigit(char):
     '''Check if a character is a digit'''
     if not (char >= '0' and char <= '9'):
@@ -88,16 +80,14 @@ def main():
         if my_len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
         elif my_len(sys.argv) < 2:
-            print("Please enter a text:")
-            while True:
-                try:
-                    str = input()
-                    str += '\n'
-                except EOFError:
-                    break
+            try:
+                str = input("What is the text to count?\n")
+                str += '\n'
+            except EOFError:
+                pass
         else:
             str = sys.argv[1]
-        print(f"the text contains {my_len(str)} characters:")
+        print(f"the text contains {len(str)} characters:")
         print(f"{upper_case_count(str)} upper letters")
         print(f"{lower_case_count(str)} lower letters")
         print(f"{punctuation_count(str)} punctuations")
