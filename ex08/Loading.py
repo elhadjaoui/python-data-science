@@ -1,6 +1,12 @@
 
 def ft_tqdm(lst: range) -> None:
-    """Print the progress of the list processing"""
+    """ft_tqdm function simulate the tqdm function from the tqdm library
+    it takes a range and print the progress of the iteration
+    Args:
+        lst (range): the range of the iteration
+    Returns:
+        None
+    """
     for i in lst:
         n = len(lst)
         percentage = (i*100)/(len(lst))
@@ -12,17 +18,11 @@ def ft_tqdm(lst: range) -> None:
 
 
 def main():
-    lst = range(100)
-    # for i in tqdm(range(10000)):
-    #     sleep(0.01)
-    for i in ft_tqdm(lst):
-        percentage = (i*100)/len(lst)
-        spaces = ' ' * (int(percentage) - i)
-        print(f"\r{percentage:.2f}%|[{'█'* int(percentage)}{spaces}]", end="")
-        sleep(0.1)
+    """Main function"""
+    for _ in ft_tqdm(range(333)):
+        pass
 
 
 if __name__ == "__main__":
     """Run the main function"""
     main()
-
