@@ -1,44 +1,8 @@
 import sys
 
 
-def my_len(string):
-    """Return the length of the string given in argument"""
-    count = 0
-    for _ in string:
-        count += 1
-    return count
-
-
 def main():
     """Print the morse code of the string given in argument"""
-    UPPERCASE_MAPPING = {
-        "a": "A",
-        "b": "B",
-        "c": "C",
-        "d": "D",
-        "e": "E",
-        "f": "F",
-        "g": "G",
-        "h": "H",
-        "i": "I",
-        "j": "J",
-        "k": "K",
-        "l": "L",
-        "m": "M",
-        "n": "N",
-        "o": "O",
-        "p": "P",
-        "q": "Q",
-        "r": "R",
-        "s": "S",
-        "t": "T",
-        "u": "U",
-        "v": "V",
-        "w": "W",
-        "x": "X",
-        "y": "Y",
-        "z": "Z",
-    }
     NESTED_MORSE = {
         "A": ".-",
         "B": "-...",
@@ -80,14 +44,14 @@ def main():
     }
     res = ""
     try:
-        if my_len(sys.argv) != 2:
+        if len(sys.argv) != 2:
             raise AssertionError()
         str = sys.argv[1]
         for char in str:
-            if UPPERCASE_MAPPING[char] not in NESTED_MORSE:
+            if char.upper() not in NESTED_MORSE:
                 raise KeyError()
             else:
-                res += NESTED_MORSE[UPPERCASE_MAPPING[char]] + " "
+                res += NESTED_MORSE[char.upper()] + " "
         print(res[:-1])
     except (AssertionError, KeyError):
         print("AssertionError: The arguments are bad")
