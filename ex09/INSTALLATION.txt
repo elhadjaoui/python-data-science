@@ -1,0 +1,14 @@
+
+## Installation Instructions
+
+To install the ft_package, you can use pip:
+
+pip install ./dist/ft_package-0.0.1.tar.gz
+or
+pip install ./dist/ft_package-0.0.1-py3-none-any.whl
+
+but first you need to generate ft_package-0.0.1.tar.gz and ft_package-0.0.1-py3-none-any.whl
+
+python3 -m build
+
+to display your package characteristics type "pip show -v ft_package"

@@ -5,19 +5,18 @@ build-backend = "hatchling.build"
 [project]
 name = "ft_package"
 version = "0.0.1"
-authors = [
-  { name="Mohamed El hadjaoui", email="author@example.com" },
-]
-license = "MIT"
 description = "A small test package"
 readme = "README.md"
-requires-python = ">=3.8"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+requires-python = ">=3.6"
+license = { text = "MIT" }
+authors = [
+  { name = "Mohamed El hadjaoui", email = "author@example.com" }
 ]
-keywords = ["example", "test"]
-entry-points = {}
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+]
+
 [project.urls]
-Homepage = "https://github.com/elhadjaoui/python-data-science/tree/main/ex09"
+"Homepage" = "https://github.com/elhadjaoui/python-data-science/tree/main/ex09"

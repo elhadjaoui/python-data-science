@@ -1,5 +1,5 @@
 import sys
-from ft_filter import ft_filter
+import ft_filter as ff
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
             raise AssertionError("the arguments are bad")
         if not isinstance(number, int):
             raise AssertionError("the arguments are bad")
-        print((ft_filter(lambda word: len(word) > number, str.split())))
+        print((ff.ft_filter(lambda word: len(word) > number, str.split())))
     except AssertionError as e:
         print(f"AssertionError: {e}")
 
