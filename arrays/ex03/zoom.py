@@ -14,11 +14,17 @@ def zoom(path: str) -> list:
         with Image.open(path)as img:
             np_img = np.array(img)
             print(f"The shape of image is: {np_img.shape}")
-            print(np_img)
-            np_img.reshape(400, 400, 1)
-            print(f"The shape of image is: {np_img.shape}")
-            img.fromarray(np_img).show()
-            return np_img.tolist()
+            # print(np_img)
+            # (width, height) = img.size
+            # print(f"Width: {width}, Height: {height}")
+            # crop image
+            # new_image = img.crop((width - 350, height - 350, 350, 350)).show()
+            cropped_image = np_img[:600, :600, :]
+            # new_image = img.resize((700, 700)).show()
+            # new_image.save("animall.jpeg")
+            # print(f"The shape of image is: {np_img.shape}")
+            Image.fromarray(cropped_image).convert('L').show()
+            # return np_img.tolist()
     except FileNotFoundError:
         print("The file was not found.")
         return None
