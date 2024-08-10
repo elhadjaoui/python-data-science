@@ -11,22 +11,30 @@ def zoom(path: str) -> list:
         list - list of lists of pixels
     """
     try:
+        if not path.lower().endswith(("jpg", "jpeg")):
+            raise AssertionError("Only JPG and JPEG formats are supported.")
         with Image.open(path)as img:
             np_img = np.array(img)
             print(f"The shape of image is: {np_img.shape}")
             # print(np_img)
-            # (width, height) = img.size
-            # print(f"Width: {width}, Height: {height}")
-            # crop image
-            # new_image = img.crop((width - 350, height - 350, 350, 350)).show()
-            cropped_image = np_img[:600, :600, :]
-            # new_image = img.resize((700, 700)).show()
-            # new_image.save("animall.jpeg")
-            # print(f"The shape of image is: {np_img.shape}")
-            Image.fromarray(cropped_image).convert('L').show()
-            # return np_img.tolist()
+            print(img.size)
+            cropped_image = np_img[90:490, 450:850, :]
+            cropped_image_pil = Image.fromarray(cropped_image).convert('L')
+            cropped_image_np = np.array(cropped_image_pil)
+            new_shape = cropped_image_np.reshape(400, 400, 1)
+            print(f"The new shape of image is: {new_shape.shape} or ", end="")
+            print(f"{cropped_image_pil.size}")
+            print(new_shape)
+            cropped_image_pil.save("zoomed.jpeg")
+            return new_shape.tolist()
     except FileNotFoundError:
         print("The file was not found.")
+        return None
+    except AssertionError as e:
+        print(e)
+        return None
+    except Exception:
+        print("An error occurred.")
         return None
 
 
