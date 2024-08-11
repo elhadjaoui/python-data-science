@@ -35,13 +35,13 @@ def give_bmi(
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
-    """Return a list of booleans indicating if the BMI is greater 
+    """Return a list of booleans indicating if the BMI is greater
     than the limit.
     args:
         bmi: list[int | float] - list of BMI values
         limit: int - limit value
     returns:
-        list[bool] - list of booleans indicating if the BMI is greater 
+        list[bool] - list of booleans indicating if the BMI is greater
         than the limit
     """
     try:
