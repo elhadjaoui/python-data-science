@@ -1,16 +1,19 @@
 
 import pandas as pd
-import numpy as np
 
 
 def load(path: str):
-    dates = pd.date_range("20130101", periods=6)
-    df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD"))
-    print(df.loc[:, ["A", "B"]])
+    """Load a CSV file and return a DataFrame."""
+    try:
+        data = pd.read_csv(path)
+        return data
+    except FileNotFoundError:
+        print(f"File {path} not found")
+        return None
 
 
 def main():
-    dataset = load("data.csv")
+    dataset = load("population_total.csv")
     print(dataset)
     print(load.__doc__)
 
