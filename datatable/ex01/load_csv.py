@@ -1,6 +1,5 @@
 
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
 def load(path: str) -> pd.DataFrame:
@@ -20,11 +19,9 @@ def load(path: str) -> pd.DataFrame:
 
 
 def main():
-    dataset = load("life_expectancy_years.csv")
-    print(dataset)
-    dataset.plot()
-    plt.show()
-    print(load.__doc__)
+    df = load("life_expectancy_years.csv")
+    print(df)
+    # print(load.__doc__)
 
 
 if __name__ == "__main__":

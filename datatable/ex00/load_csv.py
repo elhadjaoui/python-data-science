@@ -6,7 +6,7 @@ def load(path: str) -> pd.DataFrame:
     try:
         if not path.lower().endswith('.csv'):
             raise AssertionError("Error: The file fromat is not .csv")
-        df = pd.read_csv(path)
+        df = pd.read_csv(path, index_col=0)
         print(f"Loading dataset of dimensions {df.shape}")
         return df
     except FileNotFoundError:
