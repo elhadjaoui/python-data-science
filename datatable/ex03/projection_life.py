@@ -1,9 +1,10 @@
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt  # type: ignore
 from load_csv import load
 
 
 def main():
+    """Load the life expectancy and GDP datasets and plot the data."""
     # Load the dataset
     df = load("life_expectancy_years.csv")
     df2 = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
@@ -20,13 +21,13 @@ def main():
     plt.scatter(gdp, life_expectancy)
     plt.xscale('log')
     # Add labels and title
-    plt.xlabel('Groos Domestic Product')
+    plt.xlabel('Gross Domestic Product')
     plt.ylabel('Life Expectancy')
     plt.title('1900')
     # xticks and yticks are used to set the range of the x and y axes
     plt.xticks([300, 1000, 10000], ['300', '1k', '10k'])
     plt.yticks(range(20, 60, 5))
-    # # Show the plot
+    # Show the plot
     plt.show()
 
 

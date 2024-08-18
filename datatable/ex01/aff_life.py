@@ -4,6 +4,8 @@ from load_csv import load
 
 
 def main():
+    """Load the life expectancy dataset
+    and plot the life expectancy of Morocco."""
     # Load the dataset
     df = load("life_expectancy_years.csv")
     if df is None:

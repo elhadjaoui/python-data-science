@@ -1,9 +1,11 @@
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt  # type: ignore
 from load_csv import load
 
 
 def main():
+    """Load the population dataset
+    and plot the population of Morocco and France."""
     # Load the dataset
     df = load("population_total.csv")
     if df is None:
