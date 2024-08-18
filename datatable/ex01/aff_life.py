@@ -6,6 +6,8 @@ from load_csv import load
 def main():
     # Load the dataset
     df = load("life_expectancy_years.csv")
+    if df is None:
+        return
     # iloc is used to select the first row of Morocco using indexers
     morocco_data = df[df['country'] == 'Morocco'].iloc[0, 1:]
     # Convert the index  to integers and the values to floats
