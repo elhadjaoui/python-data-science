@@ -3,8 +3,9 @@ from S1E7 import Baratheon, Lannister
 
 class King(Baratheon, Lannister):
     """King class derived from Baratheon and Lannister classes"""
+
     def __init__(self, first_name, is_alive=True, family_name="Baratheon",
-                     eyes="brown", hairs="dark"):
+                 eyes="brown", hairs="dark"):
         """ initializes the character
 
         Args:
@@ -34,6 +35,9 @@ class King(Baratheon, Lannister):
 
 
 def main():
+    # python uses the C3 linearization algorithm to determine
+    # the order of inheritance
+    # print(King.__mro__)
     Joffrey = King("Joffrey")
     print(Joffrey.__dict__)
     Joffrey.set_eyes("blue")
