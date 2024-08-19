@@ -3,15 +3,18 @@ class calculator:
 
     def dotproduct(V1: list[float], V2: list[float]) -> None:
         """computes the dot product of two vectors"""
-        print(f"Dot Product is: {sum([V1[i] * V2[i] for i in range(len(V1))])}")
+        print("Dot Product is: ", end="")
+        print(sum([V1[i] * V2[i] for i in range(len(V1))]))
 
     def add_vec(V1: list[float], V2: list[float]) -> None:
         """adds two vectors"""
-        print([V1[i] + V2[i] for i in range(len(V1))]) 
+        print("Add Vector is: ", end="")
+        print([float(V1[i] + V2[i]) for i in range(len(V1))])
 
     def sous_vec(V1: list[float], V2: list[float]) -> None:
         """subtracts two vectors"""
-        print([V1[i] - V2[i] for i in range(len(V1))])
+        print("Sous Vector is: ", end="")
+        print([float(V1[i] - V2[i]) for i in range(len(V1))])
 
 
 def main():
