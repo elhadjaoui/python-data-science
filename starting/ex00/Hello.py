@@ -15,3 +15,12 @@ print(ft_list)
 print(ft_tuple)
 print(ft_set)
 print(ft_dict)
+
+# list are a python data type that is ordered and changeable.
+# Allows duplicate members.
+# tuple are a python data type that is ordered and unchangeable.
+# Allows duplicate members.
+# set are a python data type that is unordered and unindexed.
+# No duplicate members.
+# dictionary are a python data type that is unordered, changeable and indexed.
+# No duplicate members.
